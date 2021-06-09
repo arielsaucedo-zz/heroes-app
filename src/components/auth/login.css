@@ -48,3 +48,8 @@
 .box input[type="submit"]:hover {
   background: #2ecc71;
 }
+
+.btn-login[disabled] {
+  opacity: 0.3;
+  pointer-events: none;
+}
