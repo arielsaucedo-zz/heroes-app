@@ -1,9 +1,9 @@
 import React from "react";
 
-export const HeroesScreen = () => {
+export const SearchScreen = () => {
   return (
     <div>
-      <h1>Heroes screen</h1>
+      <h1>Search Screen</h1>
     </div>
   );
 };

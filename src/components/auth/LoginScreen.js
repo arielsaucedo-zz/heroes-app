@@ -1,18 +1,22 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { startLogin } from "../../actions/auth";
+
 import { useForm } from "../../hooks/useForm";
 import "./login.css";
 
 export const LoginScreen = () => {
+  const dispatch = useDispatch();
+
   const [formValues, handleInputChange] = useForm({
-    email: "",
-    password: "",
+    email: "challenge@alkemy.org",
+    password: "react",
   });
   const { email, password } = formValues;
-  console.log(email, password);
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    console.log(e);
+    dispatch(startLogin(email, password));
   };
 
   return (
