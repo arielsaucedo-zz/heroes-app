@@ -3,8 +3,8 @@ import { Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { startLogin } from "../../actions/auth";
 
-// import { useForm } from "../../hooks/useForm";
 import "./login.css";
+import Swal from "sweetalert2";
 
 export const LoginScreen = () => {
   const dispatch = useDispatch();
@@ -22,10 +22,21 @@ export const LoginScreen = () => {
           ) {
             errors.email = "Ingrese un email correcto";
           }
+          if (!values.password) {
+            errors.password = "Este campo es requerido";
+          }
           return errors;
         }}
         onSubmit={(values) => {
-          return dispatch(startLogin(values.email, values.password));
+          return dispatch(startLogin(values.email, values.password)).catch(
+            () => {
+              Swal.fire({
+                icon: "error",
+                title: "Error!",
+                text: "Usuario o contraseña incorrectos",
+              });
+            }
+          );
         }}
       >
         {({
@@ -55,6 +66,7 @@ export const LoginScreen = () => {
               value={values.password}
               onChange={handleChange}
             />
+            {errors.password && touched.password && errors.password}
             <input
               className="btn-login"
               type="submit"

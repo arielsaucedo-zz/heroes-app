@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import { types } from "../types/types";
 
 export const startLogin = (email, password) => {
@@ -9,7 +10,7 @@ export const startLogin = (email, password) => {
     });
     const token = resp.data.token;
 
-    if (token !== "") {
+    if (token !== undefined) {
       localStorage.setItem("token", token);
       localStorage.setItem("user", email);
 
@@ -18,8 +19,6 @@ export const startLogin = (email, password) => {
           userName: email,
         })
       );
-    } else {
-      console.log("No se pudo loguear");
     }
   };
 };
