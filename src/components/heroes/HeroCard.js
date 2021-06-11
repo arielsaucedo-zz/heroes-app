@@ -2,7 +2,7 @@ import React from "react";
 
 export const HeroCard = () => {
   return (
-    <div className="card d-flex flex-row">
+    <div className="card d-flex flex-row" style={{ maxWidth: 400 }}>
       <div>
         <img
           src="https://www.superherodb.com/pictures2/portraits/10/100/10431.jpg"

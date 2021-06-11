@@ -4,4 +4,5 @@ export const types = {
   authLogout: "[Auth] Logout",
 
   searchStart: "[Search] Start Search",
+  clearSearch: "[Search] Clear Search",
 };

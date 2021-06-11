@@ -14,6 +14,13 @@ export const searchReducer = (state = initialState, action) => {
         results: [...action.payload],
       };
 
+    case types.clearSearch:
+      return {
+        ...state,
+        search: "ok",
+        results: [],
+      };
+
     default:
       return state;
   }

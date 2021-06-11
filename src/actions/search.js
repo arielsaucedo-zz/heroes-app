@@ -8,6 +8,8 @@ export const startSearch = (searchtext) => {
     const resp = await axios.get(`${baseUrl}/search/${searchtext}`, {});
     if (resp.data.response === "success") {
       dispatch(search(resp.data.results));
+    } else {
+      dispatch(clearSearch());
     }
   };
 };
@@ -16,5 +18,11 @@ const search = (results) => {
   return {
     type: types.searchStart,
     payload: results,
+  };
+};
+
+const clearSearch = () => {
+  return {
+    type: types.clearSearch,
   };
 };
