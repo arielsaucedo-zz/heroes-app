@@ -2,6 +2,7 @@ import axios from "axios";
 
 import { types } from "../types/types";
 
+/* Accion: login de usuario */
 export const startLogin = (email, password) => {
   return async (dispatch) => {
     const resp = await axios.post("http://challenge-react.alkemy.org/", {
@@ -23,6 +24,7 @@ export const startLogin = (email, password) => {
   };
 };
 
+/* Accion: verifica si usuario esta autenticado*/
 export const startChecking = () => {
   return (dispatch) => {
     let user = localStorage.getItem("user");
@@ -44,6 +46,7 @@ const checking = (user) => {
   };
 };
 
+/* Accion: logout de usuario */
 export const startLogout = () => {
   return (dispatch) => {
     localStorage.clear();

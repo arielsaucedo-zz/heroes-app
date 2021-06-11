@@ -9,7 +9,6 @@ export const SearchScreen = () => {
   const dispatch = useDispatch();
 
   const { results, search } = useSelector((state) => state.search);
-  console.log(results);
 
   return (
     <div className="d-flex justify-content-center ">

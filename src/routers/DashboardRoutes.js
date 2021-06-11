@@ -5,6 +5,8 @@ import { HeroesScreen } from "../components/heroes/HeroesScreen";
 import { SearchScreen } from "../components/search/SearchScreen";
 import { Navbar } from "../components/ui/Navbar";
 
+/* Dashboard de las distintas rutas privadas */
+
 export const DashboardRoutes = () => {
   return (
     <>

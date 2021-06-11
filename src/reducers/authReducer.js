@@ -1,3 +1,5 @@
+/* Reducer del login */
+
 import { types } from "../types/types";
 
 const initialState = {

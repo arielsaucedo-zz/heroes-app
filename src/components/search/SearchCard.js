@@ -1,8 +1,35 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import Swal from "sweetalert2";
 
-export const SearchCard = ({ name, image }) => {
+import { addNewBadHero, addNewGoodHero } from "../../actions/hero";
+
+export const SearchCard = ({ id, name, image }) => {
+  const dispatch = useDispatch();
+  const { results } = useSelector((state) => state.search);
+  const state = useSelector((state) => state.team);
+
   const handleHeroClick = () => {
-    console.log("Agregar heroe al equipo");
+    const newHero = results.filter((hero) => hero.id === id);
+    const { biography } = newHero[0];
+
+    if (biography.alignment === "good") {
+      const heroInTeam = state.good.filter((hero) => hero.id === id);
+
+      if (heroInTeam[0] !== newHero[0] && state.good.length < 3) {
+        dispatch(addNewGoodHero(newHero));
+      } else {
+        Swal.fire("No es posible sumar a este heroe a tu equipo");
+      }
+    } else {
+      const heroInTeam = state.bad.filter((hero) => hero.id === id);
+
+      if (heroInTeam[0] !== newHero[0] && state.bad.length < 3) {
+        dispatch(addNewBadHero(newHero));
+      } else {
+        Swal.fire("No es posible sumar a este heroe a tu equipo");
+      }
+    }
   };
 
   return (

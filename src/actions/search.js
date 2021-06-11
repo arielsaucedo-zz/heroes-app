@@ -3,6 +3,7 @@ import { types } from "../types/types";
 
 const baseUrl = process.env.REACT_APP_API_URL;
 
+/* Accion: buscador de heroe */
 export const startSearch = (searchtext) => {
   return async (dispatch) => {
     const resp = await axios.get(`${baseUrl}/search/${searchtext}`, {});

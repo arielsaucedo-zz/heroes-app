@@ -9,6 +9,8 @@ import { startChecking } from "../actions/auth";
 import { LoginScreen } from "../components/auth/LoginScreen";
 import { DashboardRoutes } from "./DashboardRoutes";
 
+/* Ruteo Principal con proteccion de rutas */
+
 export const AppRouter = () => {
   const dispatch = useDispatch();
   const { userName } = useSelector((state) => state.auth);

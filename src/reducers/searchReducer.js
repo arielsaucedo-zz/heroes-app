@@ -1,3 +1,5 @@
+/* Reducer del Search */
+
 import { types } from "../types/types";
 
 const initialState = {
