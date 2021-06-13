@@ -35,7 +35,7 @@ export const Navbar = () => {
             exact
             to="/search"
           >
-            Search
+            Buscador
           </NavLink>
         </div>
       </div>
