@@ -16,8 +16,6 @@ export const HeroCardDetails = () => {
     return hero.id === id;
   });
 
-  console.log(heroDetails);
-
   const { appearance, name, work, image, biography } = heroDetails[0];
 
   return (

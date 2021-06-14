@@ -9,29 +9,58 @@ export const powerstats = (totalHeroes) => {
   /* Obtencion de sumatoria de powerstats */
 
   totalHeroes.map((hero) => {
-    return (totalCombat = totalCombat + parseInt(hero.powerstats.combat));
+    if (hero.powerstats.combat !== "null") {
+      totalCombat = totalCombat + parseInt(hero.powerstats.combat);
+    } else {
+      totalCombat = totalCombat + 0;
+    }
+    return totalCombat;
   });
 
   totalHeroes.map((hero) => {
-    return (totalDurability =
-      totalDurability + parseInt(hero.powerstats.durability));
+    if (hero.powerstats.durability !== "null") {
+      totalDurability = totalDurability + parseInt(hero.powerstats.durability);
+    } else {
+      totalDurability = totalDurability + 0;
+    }
+    return totalDurability;
   });
 
   totalHeroes.map((hero) => {
-    return (totalIntelligence =
-      totalIntelligence + parseInt(hero.powerstats.intelligence));
+    if (hero.powerstats.intelligence !== "null") {
+      totalIntelligence =
+        totalIntelligence + parseInt(hero.powerstats.intelligence);
+    } else {
+      totalIntelligence = totalIntelligence + 0;
+    }
+    return totalIntelligence;
   });
 
   totalHeroes.map((hero) => {
-    return (totalPower = totalPower + parseInt(hero.powerstats.power));
+    if (hero.powerstats.power !== "null") {
+      totalPower = totalPower + parseInt(hero.powerstats.power);
+    } else {
+      totalPower = totalPower + 0;
+    }
+    return totalPower;
   });
 
   totalHeroes.map((hero) => {
-    return (totalSpeed = totalSpeed + parseInt(hero.powerstats.speed));
+    if (hero.powerstats.speed !== "null") {
+      totalSpeed = totalSpeed + parseInt(hero.powerstats.speed);
+    } else {
+      totalSpeed = totalSpeed + 0;
+    }
+    return totalSpeed;
   });
 
   totalHeroes.map((hero) => {
-    return (totalStrength = totalStrength + parseInt(hero.powerstats.strength));
+    if (hero.powerstats.strength !== "null") {
+      totalStrength = totalStrength + parseInt(hero.powerstats.strength);
+    } else {
+      totalStrength = totalStrength + 0;
+    }
+    return totalStrength;
   });
 
   return {
