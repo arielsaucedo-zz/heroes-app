@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import { mayorPowerstats } from "../../helpers/mayorPowerstats";
 
 import { HeroCard } from "./HeroCard";
-import { TableAppearance } from "./TableAppearance";
-import { TablePowerStats } from "./TablePowerStats";
+import { TableAppearance } from "../tables/TableAppearance";
+import { TablePowerStats } from "../tables/TablePowerStats";
 
 export const HeroesScreen = () => {
   const { good } = useSelector((state) => state.team);

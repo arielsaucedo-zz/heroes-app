@@ -10,5 +10,6 @@ export const types = {
 
   addNewGoodHero: "[Hero] Add new good hero",
   addNewBadHero: "[Hero] Add new bad hero",
-  deleteHero: "[Hero] delete hero",
+  deleteGoodHero: "[Hero] Delete Good hero",
+  deleteBadHero: "[Hero] Delete Bad hero",
 };

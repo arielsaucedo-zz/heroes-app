@@ -1,6 +1,20 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
-export const HeroCard = ({ name, image, powerstats }) => {
+import { deleteBadHero, deleteGoodHero } from "../../actions/hero";
+
+export const HeroCard = ({ id, name, image, powerstats, biography }) => {
+  const dispatch = useDispatch();
+
+  const handleHeroDelete = () => {
+    if (biography.alignment === "good") {
+      dispatch(deleteGoodHero(id));
+    } else {
+      dispatch(deleteBadHero(id));
+    }
+  };
+
   return (
     <div className="card d-flex flex-row rounded" style={{ maxWidth: 400 }}>
       <div>
@@ -17,9 +31,13 @@ export const HeroCard = ({ name, image, powerstats }) => {
           <li>Power: {powerstats.power}</li>
           <li>Combat: {powerstats.combat}</li>
           <div className="mt-3 d-flex justify-content-around">
-            <button className="btn btn-primary">Detalle</button>
+            <Link to={`/heroes/${id}`}>
+              <button className="btn btn-primary">Detalle</button>
+            </Link>
             &nbsp;
-            <button className="btn btn-danger">Eliminar</button>
+            <button className="btn btn-danger" onClick={handleHeroDelete}>
+              Eliminar
+            </button>
           </div>
         </div>
       </div>

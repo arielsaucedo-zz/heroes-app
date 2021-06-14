@@ -13,3 +13,17 @@ export const addNewBadHero = (hero) => {
     payload: hero,
   };
 };
+
+export const deleteGoodHero = (id) => {
+  return {
+    type: types.deleteGoodHero,
+    payload: id,
+  };
+};
+
+export const deleteBadHero = (id) => {
+  return {
+    type: types.deleteBadHero,
+    payload: id,
+  };
+};
