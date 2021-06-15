@@ -1,8 +1,8 @@
 /* Tipos de acciones de los Reducers */
 
 export const types = {
-  authStartLogin: "[Auth] Start login",
   authLogin: "[Auth] Login",
+  authStartLogin: "[Auth] Start login",
   authLogout: "[Auth] Logout",
 
   searchStart: "[Search] Start Search",

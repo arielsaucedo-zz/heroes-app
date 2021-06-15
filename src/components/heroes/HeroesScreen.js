@@ -1,16 +1,13 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { mayorPowerstats } from "../../helpers/mayorPowerstats";
 
 import { HeroCard } from "./HeroCard";
 import { TableAppearance } from "../tables/TableAppearance";
 import { TablePowerStats } from "../tables/TablePowerStats";
+import { useHeroes } from "../../hooks/useHeroes";
 
 export const HeroesScreen = () => {
-  const { good } = useSelector((state) => state.team);
-  const { bad } = useSelector((state) => state.team);
-
-  const totalHeroes = [...good, ...bad];
+  const { totalHeroes } = useHeroes();
 
   const { maxPowerstats } = mayorPowerstats(totalHeroes);
 

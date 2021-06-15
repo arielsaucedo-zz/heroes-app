@@ -1,16 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { useHeroes } from "../../hooks/useHeroes";
 
 export const HeroCardDetails = () => {
   const { id } = useParams();
 
-  const { good } = useSelector((state) => state.team);
-  const { bad } = useSelector((state) => state.team);
-
-  const totalHeroes = [...good, ...bad];
+  const { totalHeroes } = useHeroes();
 
   const heroDetails = totalHeroes.filter((hero) => {
     return hero.id === id;
