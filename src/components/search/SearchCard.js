@@ -34,11 +34,15 @@ export const SearchCard = ({ id, name, image }) => {
 
   return (
     <div className="card d-flex flex-column rounded" style={{ maxWidth: 200 }}>
-      <div>
-        <img src={image.url} alt={name} className="img-thumbnail img-fluid" />
-      </div>
+      <img
+        src={image.url}
+        alt={name}
+        className="img-thumbnail img-fluid"
+        style={{ maxWidth: 200, maxHeight: 250 }}
+      />
+
       <div className="m-2 text-dark d-flex flex-column justify-content-around">
-        <h4>{name}</h4>
+        <h4 className="d-flex flex-wrap justify-content-center">{name}</h4>
         <br />
         <div className="text-center">
           <div className="mt-3 d-flex justify-content-around">

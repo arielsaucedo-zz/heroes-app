@@ -14,7 +14,7 @@ export const SearchScreen = () => {
     <div className="d-flex justify-content-center ">
       <div>
         <div>
-          <h2>Search Form</h2>
+          <h2>Buscador</h2>
           <hr />
           <Formik
             initialValues={{ searchText: "" }}
@@ -45,23 +45,25 @@ export const SearchScreen = () => {
                 className="d-flex flex-column justify-content-center"
               >
                 <input
+                  data-testid="searchText"
                   type="text"
-                  placeholder="Find your hero"
+                  placeholder="Busca a tu heroe"
                   className="form-control w-50 align-self-center"
                   name="searchText"
                   autoComplete="off"
                   value={values.searchText}
                   onChange={handleChange}
                 />
-                <span>
+                <span className="text-center mt-1">
                   {errors.searchText && touched.searchText && errors.searchText}
                 </span>
                 <button
+                  data-testid="button"
                   type="submit"
                   className="btn btn-primary mt-3 w-50 align-self-center"
                   disabled={isSubmitting}
                 >
-                  Search
+                  Buscar
                 </button>
               </form>
             )}

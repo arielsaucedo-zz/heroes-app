@@ -51,6 +51,7 @@ export const LoginScreen = () => {
             <h1>Login</h1>
             <p className="text-muted"> Please enter your login and password!</p>
             <input
+              data-testid="email"
               autoComplete="off"
               type="email"
               name="email"
@@ -60,6 +61,7 @@ export const LoginScreen = () => {
             />
             {errors.email && touched.email && errors.email}
             <input
+              data-testid="password"
               type="password"
               name="password"
               placeholder="Password"
@@ -68,6 +70,7 @@ export const LoginScreen = () => {
             />
             {errors.password && touched.password && errors.password}
             <input
+              data-testid="button"
               className="btn-login"
               type="submit"
               name=""

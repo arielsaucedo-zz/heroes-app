@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en componente <SearchScreen /> Debe de mostrarse correctamente 1`] = `
+<div
+  className="d-flex justify-content-center "
+>
+  <div>
+    <div>
+      <h2>
+        Buscador
+      </h2>
+      <hr />
+      <form
+        className="d-flex flex-column justify-content-center"
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="form-control w-50 align-self-center"
+          data-testid="searchText"
+          name="searchText"
+          onChange={[Function]}
+          placeholder="Busca a tu heroe"
+          type="text"
+          value=""
+        />
+        <span
+          className="text-center mt-1"
+        />
+        <button
+          className="btn btn-primary mt-3 w-50 align-self-center"
+          data-testid="button"
+          disabled={false}
+          type="submit"
+        >
+          Buscar
+        </button>
+      </form>
+    </div>
+    <div
+      className="d-flex row justify-content-center mt-4 w-100"
+    >
+      <h2
+        className="text-center"
+      >
+        Resultados
+      </h2>
+      <h3
+        className="text-center w-100"
+      >
+        Busca tu heroe para tu equipo
+      </h3>
+      <div
+        className="d-flex justify-content-evenly flex-wrap"
+      />
+    </div>
+  </div>
+</div>
+`;

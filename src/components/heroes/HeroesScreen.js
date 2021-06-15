@@ -33,13 +33,15 @@ export const HeroesScreen = () => {
             <h3 className="text-center mt-4">Altura y peso promedio</h3>
             <TableAppearance totalHeroes={totalHeroes} />
           </div>
-          <div className="container mt-4 mb-4">
-            <div className="d-flex justify-content-evenly flex-wrap m-1">
-              {totalHeroes.map((hero) => (
-                <div className="col m-1" key={hero.id}>
-                  <HeroCard {...hero} />
-                </div>
-              ))}
+          <div class="container w-100 text-center ">
+            <div className="col">
+              <div class="col-sm row">
+                {totalHeroes.map((hero) => (
+                  <div className="col m-1" key={hero.id}>
+                    <HeroCard {...hero} />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </>

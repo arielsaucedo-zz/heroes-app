@@ -18,7 +18,11 @@ export const HeroCard = ({ id, name, image, powerstats, biography }) => {
   return (
     <div className="card d-flex flex-row rounded" style={{ maxWidth: 400 }}>
       <div>
-        <img src={image.url} alt="hero" width="200" />
+        <img
+          src={image.url}
+          alt="hero"
+          style={{ maxWidth: 200, maxHeight: 268 }}
+        />
       </div>
       <div className="m-2 text-dark">
         <h4>{name}</h4>

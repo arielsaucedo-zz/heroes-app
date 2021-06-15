@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en AppRouter.js Debe de mostrar el login si no esta autenticado 1`] = `
+<div>
+  <div
+    className="d-flex justify-content-center"
+  >
+    <form
+      className="box"
+      onSubmit={[Function]}
+    >
+      <h1>
+        Login
+      </h1>
+      <p
+        className="text-muted"
+      >
+         Please enter your login and password!
+      </p>
+      <input
+        autoComplete="off"
+        name="email"
+        onChange={[Function]}
+        placeholder="Username"
+        type="email"
+        value="challenge@alkemy.org"
+      />
+      <input
+        name="password"
+        onChange={[Function]}
+        placeholder="Password"
+        type="password"
+        value="react"
+      />
+      <input
+        className="btn-login"
+        disabled={false}
+        name=""
+        type="submit"
+        value="Login"
+      />
+    </form>
+  </div>
+</div>
+`;

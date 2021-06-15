@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en componente <LoginScreen /> Debe de mostrarse correctamente  1`] = `
+<div
+  className="d-flex justify-content-center"
+>
+  <form
+    className="box"
+    onSubmit={[Function]}
+  >
+    <h1>
+      Login
+    </h1>
+    <p
+      className="text-muted"
+    >
+       Please enter your login and password!
+    </p>
+    <input
+      autoComplete="off"
+      data-testid="email"
+      name="email"
+      onChange={[Function]}
+      placeholder="Username"
+      type="email"
+      value="challenge@alkemy.org"
+    />
+    <input
+      data-testid="password"
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      type="password"
+      value="react"
+    />
+    <input
+      className="btn-login"
+      data-testid="button"
+      disabled={false}
+      name=""
+      type="submit"
+      value="Login"
+    />
+  </form>
+</div>
+`;

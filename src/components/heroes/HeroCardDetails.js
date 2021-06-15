@@ -30,8 +30,8 @@ export const HeroCardDetails = () => {
           <li>Aliases: {biography.aliases.join(", ")}</li>
           <li>Weight: {appearance.weight[1]}</li>
           <li>Height: {appearance.height[1]}</li>
-          {/* <li>Eye Color: {appearance.eye-color}</li> */}
-          {/* <li>Hair Color: {appearance.hair-color}</li> */}
+          <li>Eye Color: {appearance["eye-color"]}</li>
+          <li>Hair Color: {appearance["hair-color"]}</li>
           <li>Work base: {work.base}</li>
           <div className="mt-3 d-flex justify-content-around">
             <Link to="/heroes">
